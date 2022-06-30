@@ -1,6 +1,6 @@
 import redis from "ioredis";
 
-const Redis = new redis("rediss://:0ebd0f4875084a75bcdff0d5992e65e1@usw1-pleasing-treefrog-33263.upstash.io:33263");
+const Redis = new redis(`${process.env.REDIS_URL}`);
 
 Redis.on("connect", () => console.log("Redis is connected")).off(
   "error",

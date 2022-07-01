@@ -19,7 +19,7 @@ export async function setRedisEx(key: any, duration: any, data: any) {
   return await Redis.setex(key, duration, data);
 }
 
-export async function getRedis(key:any, parse = false) {
+export async function getRedis(key:any, parse = true) {
   try {
     if (!key) throw new Error("Cache key not found");
     const data = await Redis.get(key);

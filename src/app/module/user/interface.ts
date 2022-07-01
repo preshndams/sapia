@@ -5,6 +5,8 @@ export interface UserInterface {
   firstname: string;
   email: string;
   password: string;
+  token?:string;
+  tokenRef?:string;
 }
 
 type defaultResponseInterface = {

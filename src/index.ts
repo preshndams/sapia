@@ -14,3 +14,5 @@ async function start() {
   app.listen(PORT, () => console.log(`App is running on Port ${PORT}`));
 }
 start();
+
+export default app;
